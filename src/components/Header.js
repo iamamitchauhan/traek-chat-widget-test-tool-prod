@@ -37,7 +37,7 @@ const Header = ({ history, handleSubmit }) => {
   }
   return (
     <div>
-      <h1>Traek Development Tool</h1>
+      <h1>Traek Development Tool | Production</h1>
       <button onClick={() => {
         postRRWebData()
       }}>Save RRWEB DATA</button>
