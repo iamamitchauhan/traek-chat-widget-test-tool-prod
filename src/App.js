@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PhotoContextProvider from "./context/PhotoContext";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import NotFound from "./components/NotFound";
 
@@ -23,21 +22,19 @@ class App extends Component {
 
   render() {
     return (
-      <PhotoContextProvider>
-        <Router basename="/SnapScout">
-          <Navigation />
-          <Layout>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/blog" component={Blog} />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/contact-us" component={ContactUs} />
-              <Route exact path="/feedback" component={Feedback} />
-              <Route path="*" component={NotFound} />
-            </Switch>
-          </Layout>
-        </Router>
-      </PhotoContextProvider>
+      <Router basename="/SnapScout">
+        <Navigation />
+        <Layout>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/blog" component={Blog} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/contact-us" component={ContactUs} />
+            <Route exact path="/feedback" component={Feedback} />
+            <Route path="*" component={NotFound} />
+          </Switch>
+        </Layout>
+      </Router>
     );
   }
 }
